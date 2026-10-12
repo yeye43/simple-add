@@ -10,7 +10,11 @@ int main(void)
      int a, b;
 
     printf("Enter two integers:\n");
-    scanf("%d %d", &a, &b);
+    if (scanf("%d %d", &a, &b) != 2)
+{
+    printf("Invalid input. Please enter two integers.\n");
+    return 1;
+}
 
     printf("%d + %d = %d\n", a, b, add(a, b));
 
