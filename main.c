@@ -7,8 +7,16 @@ int add(int a, int b)
 
 int main(void)
 {
-    int result = add(3, 5);
-    printf("3 + 5 = %d\n", result);
+     int a, b;
+
+    printf("Enter two integers:\n");
+    if (scanf("%d %d", &a, &b) != 2)
+{
+    printf("Invalid input. Please enter two integers.\n");
+    return 1;
+}
+
+    printf("%d + %d = %d\n", a, b, add(a, b));
 
     return 0;
 }
