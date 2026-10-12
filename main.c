@@ -7,8 +7,12 @@ int add(int a, int b)
 
 int main(void)
 {
-    int result = add(3, 5);
-    printf("3 + 5 = %d\n", result);
+     int a, b;
+
+    printf("Enter two integers:\n");
+    scanf("%d %d", &a, &b);
+
+    printf("%d + %d = %d\n", a, b, add(a, b));
 
     return 0;
 }
